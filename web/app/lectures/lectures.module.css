@@ -1,0 +1,11 @@
+.ul {
+    list-style: inside;
+}
+
+.emphasis {
+    color: var(--text-emphasis);
+}
+
+.comment {
+    color: var(--text-comment)
+}

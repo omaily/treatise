@@ -1,0 +1,176 @@
+@tailwind base;     
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+:root {
+    --border-link: 4px;
+    --padding: 1rem;
+
+    /* --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Ubuntu; */
+    /* --font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    --font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+    --navbar-bg: #121216;       /* --background-rgb */
+    --navbar-label: #c1c1c1;     /* --text-rgb */
+    --navbar-label-hover: #6795de;;
+    --navbar-text: #a1a1a1;    
+
+    --back-ground:  #16171b;;
+    --back-content: #1e1e1e;
+
+    --text-header: #9a9a9a;
+    --text-paragraph: #9a9a9a;
+    --text-emphasis:   #eb4e4e;  /*rgba(235, 78, 78, 1); */
+    --text-comment:#1c8a0d;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+:root {
+        --navbar-label: 214, 219, 220;
+        --navbar-bg: url("https://cdn.cloudflare.steamstatic.com/store/promo/winter2023/pattern-04_ice-sparkes.gif?v=2") center top repeat, rgb(15, 14, 18);
+    }
+} */
+
+
+body {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+    font-family: var(--font-family);
+
+    background: var(--back-ground);
+    color: var(--navbar-label);
+}
+
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+    background-color: var(--navbar-bg);
+}
+
+
+#header-wrapper{
+    max-width: 1440px;
+    margin: 20px auto;
+    padding: 0px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+header .login {
+    margin-left: auto;
+    padding: 10px 20px;
+    margin-bottom: 4px;
+    text-decoration: none;  
+}
+
+#menu-navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+header a{
+    font-weight: bold;
+    text-decoration: underline;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+
+header a:hover{
+    /* background-color: #ffffff1a; */
+    color: var(--navbar-label-hover)
+}
+
+header #link {
+    padding: 10px 20px;
+    margin-bottom: 4px;
+    text-decoration: none;  
+}
+
+header #link:hover {
+    margin-bottom: 0px;
+    color: var(--n);
+    /* background-color: rgba(248, 242, 255, 0.8); */
+    border-bottom: var(--navbar-label-hover) solid;
+}
+
+main {
+    font-family: BLOKK, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+
+    padding: var(--padding) var(--padding) ;
+    width: 100%;
+    min-width: 320px;
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+    main { width: 100%; }
+}
+
+input, textarea {
+    margin: 0.25rem 0;
+}
+
+input[type="date"] {
+    background-color: #ff7300;
+    margin-left: 30px;
+    padding: 10px;
+    position: relative;
+    font-family: "Roboto Mono", monospace;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+h1, h2, h3, h4 {
+    padding: 5px;
+    margin: 0;
+    color: #e2e2e2;
+    color: var(--text);
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+button {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+    font-family: Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 500; /* bold */
+    letter-spacing: .25px;
+    text-decoration: none;
+}
+
