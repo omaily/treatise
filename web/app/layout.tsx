@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import './globals.css'
-import logoMTS from "../img/logo-eco.svg"
+import logoMTS from "../img/logo.jpg"
 
 
 export const metadata: Metadata = {
@@ -21,11 +21,12 @@ export default function RootLayout({
         <body>
             <header>
                 <div id="header-wrapper">
-                    <Image 
+                    <Image
                         alt='Mount'
                         src={logoMTS}
                         // fill
-                        // sizes='48px'
+                        width={40}
+                        height={40}
                         style={{
                             alignItems: "center",
                             margin: "0px 20px 0px 0px",
@@ -35,8 +36,11 @@ export default function RootLayout({
                         <Link href="/">
                             <div id="link">Home</div>
                         </Link>
-                        <Link href="/lectures">
-                            <div id="link">Lectures</div>
+                        <Link href="/lectures/golang">
+                            <div id="link">golang</div>
+                        </Link>
+                        <Link href="/lectures/chi">
+                            <div id="link">Chi</div>
                         </Link>
                     </nav>
                     <Link href="/login" className='login'>

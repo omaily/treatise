@@ -8,20 +8,23 @@ import "prismjs/components/prism-go"
 // loadLanguages(['puthon']);
 
 export default function Code({
-    code,
     language,
+    code,
 } : {
-    code: string,
     language: string,
+    code: string,
 }) {
     const ref = useRef<HTMLPreElement>(null)
     useEffect(() => {
         Prism.highlightAll();
     }, []);
+
     return (
         <div className='Code'>
             <pre ref={ref}>
-                <code className={`language-${language}`}>{code}</code>
+                <code className={`language-${language}`}>
+                    {code}
+                </code>
             </pre>
         </div>
     );
